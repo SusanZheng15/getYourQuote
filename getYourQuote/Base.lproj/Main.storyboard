@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="getYourQuote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nX5-jq-x6V">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc5-SN-nH8">
+                                <state key="normal" title="Generate random Quote"/>
+                                <connections>
+                                    <action selector="getQuoteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8be-Vq-8E7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-Rv-HCT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nX5-jq-x6V" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" constant="-38.75" id="BGC-xT-TO0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jc5-SN-nH8" secondAttribute="bottom" constant="45" id="ENb-Ct-Ba2"/>
+                            <constraint firstItem="nX5-jq-x6V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7A-gZ-QKk"/>
+                            <constraint firstItem="Rg2-Rv-HCT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-333" id="NO9-W6-yma"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jc5-SN-nH8" secondAttribute="trailing" constant="89" id="QCF-cp-usx"/>
+                            <constraint firstItem="Jc5-SN-nH8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="XxD-bW-04M"/>
+                            <constraint firstItem="Rg2-Rv-HCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eFw-kN-Bi4"/>
+                            <constraint firstItem="nX5-jq-x6V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="131" id="gwC-AW-wgZ"/>
+                            <constraint firstItem="Rg2-Rv-HCT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hUg-mA-ls9"/>
+                            <constraint firstItem="nX5-jq-x6V" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" constant="-3.75" id="scV-u3-amJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="Rg2-Rv-HCT" id="KE0-o4-FQo"/>
+                        <outlet property="getRandomQuoteButton" destination="Jc5-SN-nH8" id="46L-sg-sOw"/>
+                        <outlet property="quotesTextView" destination="nX5-jq-x6V" id="dxr-1o-Xfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
